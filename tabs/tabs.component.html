@@ -1,0 +1,14 @@
+<div *ngFor="let item of users" class="wrap-users">
+  <button [innerText]="item.name" (click)="userID=item.id" mat-button></button>
+  <button [innerText]="readMore[item.id]===true?'unread':'read more'" (click)="readMore[item.id]=!readMore[item.id]" mat-button></button>
+  <div *ngIf="readMore[item.id]===true">
+  <span [innerText]="item.username"></span>
+  <span [innerText]="item.email"></span>
+  <span [innerText]="item.address.city"></span>
+</div>
+</div>
+<ul>
+  <li *ngFor="let item of todos" class="wrap-users">
+    <span [innerText]="item.title" *ngIf="item.userId===userID"></span>
+  </li>
+</ul>

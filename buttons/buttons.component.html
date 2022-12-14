@@ -1,0 +1,15 @@
+<div class="wrap-li">
+  <ng-container *ngFor="let comment of comments">
+    <li [innerText]="comment.id" *ngIf="comment.postId===userID"></li>
+    <li [innerText]="comment.name" *ngIf="comment.postId===userID"></li>
+    <li [innerText]="comment.email" *ngIf="comment.postId===userID"></li>
+    <li [innerText]="comment.body" *ngIf="comment.postId===userID"></li>
+  </ng-container>
+</div>
+<div *ngFor="let post of posts" class="wrap">
+  <button [innerText]="post.body+'&nbsp;&nbsp;&nbsp;'+post.title" (click)="userID=post.id" mat-button></button>
+
+</div>
+<ul>
+
+</ul>

@@ -1,0 +1,16 @@
+:host {
+  .example-tab-icon {
+    margin-right: 8px;
+  }
+
+  .wrap-users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  button{
+    margin-top: 5px;
+    color: pink;
+    border: 1px solid pink
+  }
+}
